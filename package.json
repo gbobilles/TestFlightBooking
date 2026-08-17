@@ -1,0 +1,15 @@
+{
+  "name": "TestFlight",
+  "version": "1.0.0",
+  "description": "web automation for cheapflights.com.au and API automation for restful-booker",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:web": "playwright test --project=web",
+    "test:api": "playwright test --project=api",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0"
+  }
+}
