@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "playwright test",
-    "test:web": "playwright test --project=web",
+    "test:web": "playwright test --project=web ",
+    "test:web-headed": "playwright test --project=web --headed",
     "test:api": "playwright test --project=api",
     "report": "playwright show-report"
   },

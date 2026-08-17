@@ -4,7 +4,7 @@ module.exports = defineConfig({
   timeout: 60000,
   fullyParallel: false,
   retries: process.env.CI ? 1 : 0,
-  reporter: [['list']],
+  reporter: 'html',
 
   projects: [
     {
