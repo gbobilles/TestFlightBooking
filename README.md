@@ -20,6 +20,6 @@ npm test            # both
 npm run report      # open the HTML report from the last run
 ```
 
-`test:web` runs headless by default; `HEADLESS=false npm run test:web` to watch it.
+`test:web` runs headless by default; 
 `test:api` points at the public demo server by default;
 
