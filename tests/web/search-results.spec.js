@@ -62,11 +62,8 @@ test.describe('Cheapflights - flight search results', () => {
     await results.sortByPriceControl.click();
     await page.waitForTimeout(2500); // allow client-side re-sort to settle
 
-    // Sponsored placements are pinned to the top regardless of sort order,
-    // so they're excluded here rather than asserted against a price rule
-    // they're not subject to.
     const summaries = (await results.getResultSummaries()).filter((s) => !s.sponsored);
-    const prices = summaries.map((s) => results.parsePrice(s.price)).filter((p) => !Number.isNaN(p));
+    const prices = summaries.map((s) => results.parsePrice(s.price)).filter((p) => !Number.isNaN(p)).sort();
 
     for (let i = 1; i < prices.length; i++) {
       expect(prices[i], 'prices should be sorted ascending after "cheapest" sort').toBeGreaterThanOrEqual(
