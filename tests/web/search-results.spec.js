@@ -54,7 +54,7 @@ test.describe('Cheapflights - flight search results', () => {
     }
   });
 
-  test.skip('sorting by cheapest should reorder results so price is non-decreasing top to bottom', async ({ page }) => {
+  test('sorting by cheapest should reorder results so price is non-decreasing top to bottom', async ({ page }) => {
     if ((await results.sortByPriceControl.count()) === 0) {
       // Some layouts default to cheapest-first already; nothing to toggle.
       test.skip();
