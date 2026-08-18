@@ -1,14 +1,15 @@
-```
+# Playwright web automation for cheapflights.com.au and API automation for restful-booker
+
 ## Setup
+```
 npm install
 
 npx playwright install
 ```
 
 
-
-```
 ## Running
+```
 npm run test:api    # API suite, no browser needed
 
 npm run test:web    # web suite, headless
